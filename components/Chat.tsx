@@ -10,7 +10,7 @@ export const initialMessages: ChatGPTMessage[] = [
   {
     role: "assistant",
     content:
-      "Hi! I am a interactive chat bot that is going to help assist you with your deployment needs. Feel free to ask me any questions.",
+      "Hi! I am an interactive chat bot that is going to help assist you with your Cal Poly Slo needs. Feel free to ask me any questions.",
   },
 ];
 
@@ -20,7 +20,7 @@ const InputMessage = ({ input, setInput, sendMessage }: any) => (
       type="text"
       aria-label="chat input"
       required
-      className="min-w-0 flex-auto appearance-none rounded-md border border-zinc-900/10 bg-white px-3 py-[calc(theme(spacing.2)-1px)] shadow-md shadow-zinc-800/5 placeholder:text-zinc-400 focus:border-teal-500 focus:outline-none focus:ring-4 focus:ring-teal-500/10 sm:text-sm text-zinc-900"
+      className="min-w-0 flex-auto appearance-none rounded-md border border-green-500 bg-white px-3 py-[calc(theme(spacing.2)-1px)] shadow-md shadow-green-800/5 placeholder:text-green-400 focus:border-green-500 focus:outline-none focus:ring-4 focus:ring-green-500/10 sm:text-sm text-green-900"
       value={input}
       onKeyDown={(e) => {
         if (e.key === "Enter") {
@@ -34,7 +34,7 @@ const InputMessage = ({ input, setInput, sendMessage }: any) => (
     />
     <Button
       type="submit"
-      className="ml-2 w-32 h-12 flex-none"
+      className="ml-2 w-32 h-12 flex-none bg-green-600 hover:bg-green-500 active:bg-green-700 text-white"
       onClick={() => {
         sendMessage(input);
         setInput("");
@@ -115,7 +115,7 @@ export function Chat() {
   };
 
   return (
-    <div className="rounded-2xl border-zinc-700  lg:border lg:p-6">
+    <div className="rounded-2xl border-green-700 lg:border lg:p-6">
       {messages.map(({ content, role }, index) => (
         <ChatLine key={index} role={role} content={content} />
       ))}
@@ -123,7 +123,7 @@ export function Chat() {
       {loading && <LoadingChatLine />}
 
       {messages.length < 2 && (
-        <span className="mx-auto flex flex-grow text-gray-300 clear-both">
+        <span className="mx-auto flex flex-grow text-green-300 clear-both">
           Type a message to start the conversation
         </span>
       )}

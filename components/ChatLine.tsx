@@ -1,6 +1,5 @@
 import clsx from "clsx";
 import Balancer from "react-wrap-balancer";
-import HouseCard from "./HouseCard";
 
 // wrap Balancer to remove type errors :( - @TODO - fix this ugly hack
 const BalancerWrapper = (props: any) => <Balancer {...props} />;
@@ -43,21 +42,11 @@ const convertNewLines = (text: string) =>
     </span>
   ));
 
-const findHouse = (text: string) => {
-  const regex = /(Ravenclaw|Hufflepuff|Gryffindor|Slytherin)/;
-  const matches = text.match(regex);
-  if (matches && matches.length > 0) {
-    return matches[0];
-  }
-  return null; // return null if no matching substring found
-};
-
 export function ChatLine({ role = "assistant", content }: ChatGPTMessage) {
   if (!content) {
     return null;
   }
-  const formatteMessage = convertNewLines(content);
-  const hogwartzHouse = findHouse(content);
+  const formattedMessage = convertNewLines(content);
 
   return (
     <div
@@ -71,10 +60,7 @@ export function ChatLine({ role = "assistant", content }: ChatGPTMessage) {
             <p className="font-large text-sm text-zinc-400 font-semibold mb-2">
               {role == "assistant" ? "AI" : "You"}
             </p>
-            <p className="text font-normal">{formatteMessage}</p>
-            {hogwartzHouse && role == "assistant" && (
-              <HouseCard house={hogwartzHouse} />
-            )}
+            <p className="text font-normal">{formattedMessage}</p>
           </div>
         </div>
       </div>

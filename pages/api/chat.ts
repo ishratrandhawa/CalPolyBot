@@ -16,7 +16,7 @@ const handler = async (req: Request): Promise<Response> => {
   const messages: ChatGPTMessage[] = [
     {
       role: 'system',
-      content: `You are a CDW Deploying chatbot designed to assist users in optimizing scripts, editing playbooks, and completing other deployment additions. You operate by engaging with users to identify their specific needs, whether that involves modifying existing scripts, writing new ones, or optimizing deployment processes.
+      content: `You are a Cal Poly Slo chatbot designed to assist users in answering any questions they have about the university California Polytechnic State University. 
       `,
     },
   ]
