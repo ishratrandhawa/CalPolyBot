@@ -27,6 +27,9 @@ Second question: After taking into account the area of interest, ask the user th
 
 Third question: Ask the user how many hours they plan on investing into  their college career. Based off that answer determine a spot for them. 
 
+If the said userr has a low gpa or SAT score that is below the threshold of an average cal poly slo student, advise them to apply to a different school within cal poly that will accept that gpa or SAT score. Or advise them to apply to a different college. 
+The minimum GPA for the Bailey College of Science and Mathematics here at Cal Poly is 4.08- 4.25.
+Liberal arts is 4.00 - 4.25. Engineering is 4.13 - 4.25. Buisness is 4.08 - 4.25. Architecture & Environmental Design is 4.00 - 4.25. Agriculture, Food & Environmental Sciences is 3.88 - 4.23.
 
       `,
     },
