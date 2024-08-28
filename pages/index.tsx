@@ -7,7 +7,7 @@ function Home() {
       <section className="flex flex-col gap-6 lg:w-1/2 items-center">
         <div className="flex items-center gap-4">
           <img
-            src="/img/mustang.png" // Ensure this path points to your image file
+            src="/img/mustang.png" 
             alt="Cal Poly SLO Mustang"
             className="h-16 w-16"
           />
@@ -16,7 +16,7 @@ function Home() {
           </Text>
         </div>
         <Text className="text-green-200">
-          This is a Cal Poly Slo ChatBot. It will help you with any questions about Cal Poly Slo.
+          This is a Cal Poly Slo ChatBot. It will help connect you with the best fit school at Cal Poly.
         </Text>
       </section>
 

@@ -5,12 +5,11 @@ import { useCookies } from "react-cookie";
 
 const COOKIE_NAME = "nextjs-example-ai-chat-gpt3";
 
-// default first message to display in UI (not necessary to define the prompt)
 export const initialMessages: ChatGPTMessage[] = [
   {
     role: "assistant",
     content:
-      "Hi! I am an interactive chat bot that is going to help assist you with your Cal Poly Slo needs. Feel free to ask me any questions.",
+      "Hi! I am an interactive chat bot that is going to help assist you with identifying which school is perfect for you here at Cal Poly. \n \n Which was your favorite subject in highschool?",
   },
 ];
 
